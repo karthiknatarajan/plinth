@@ -25,9 +25,11 @@ type Router struct {
 // to the appropriate handlers.
 func NewRouter(
 	api handler.APIHandler,
+	// web WebHandler,
 ) *Router {
 	return &Router{
 		api: api,
+		// web: web,
 	}
 }
 func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request) {
